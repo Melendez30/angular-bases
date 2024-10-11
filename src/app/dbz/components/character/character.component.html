@@ -1,0 +1,32 @@
+<div class="col">
+
+    <br>
+    <h4>Agregar Personaje</h4>
+    <!-- PARTE DEL NGMODEL -->
+    <!-- PROPAGACION DEL FORUMALIO (YA NO SE RECARGA EL NAVEGADOR) -->
+   <form class="row" (ngSubmit)="emitCharacter()">
+
+    <input 
+    type="text" 
+    [(ngModel)]="character.name" [ngModelOptions]="{standalone: true}"
+    class="form-control mb-2" 
+    placeholder="Nombre">
+
+    <input 
+    type="number" 
+    [(ngModel)]="character.power"  [ngModelOptions]="{standalone: true}"
+    class="form-control mb-2" 
+    placeholder="Poder">
+
+    <button 
+    type ="submit" 
+    class="btn btn-primary mx-2">
+        Agregar
+    </button>
+ 
+    <br>
+
+    <!-- <pre>{{character | json}}</pre> -->
+    
+   </form> 
+</div>
